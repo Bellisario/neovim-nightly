@@ -1,0 +1,23 @@
+name: Update Neovim Nightly
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # 6:00 AM every day (nvim releases nightly at 5:05 AM)
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update formula
+        run: ./update-formula.sh
+
+      - name: Commit updated formula
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: "chore: update formula"
