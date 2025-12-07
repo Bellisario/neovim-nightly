@@ -1,14 +1,14 @@
 cask "neovim-nightly" do
-  version "nightly-d6bee7e407442112ee9008ea35d6fe73dbb3eaaf"
+  version "nightly-62dd74d472f694d1386c54afc1c65e2aff4f4396"
 
   on_arm do
-    sha256 "a63b7a2f0a059e28efca93fdb2e9d46778bc3b5c0a4d384263ce4c2a66646c1c"
+    sha256 "c4b05742b1c6d101996051febf0398624b66965cb0a6b173567fedf96ec96c1a"
     url "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz",
         verified: "github.com/neovim"
     binary "nvim-macos-arm64/bin/nvim"
   end
   on_intel do
-    sha256 "5cb9b3290735c44e05961eab6d521eb82d5491ad26d7551d74f4bd0eb69df6df"
+    sha256 "8a86b97f6afe08b6bddba6a0fabfe4432a164000a3df31754e755d0f8850cc58"
     url "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz",
         verified: "github.com/neovim"
     binary "nvim-macos-x86_64/bin/nvim"
